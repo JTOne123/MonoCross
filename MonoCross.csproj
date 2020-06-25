@@ -7,7 +7,15 @@
     <Description>MonoCross Framework</Description>
     <NeutralLanguage>en</NeutralLanguage>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\MonoCross.xml</DocumentationFile>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <Compile Remove="Android\**" />
@@ -109,7 +117,7 @@
       <AssemblyVersion>$(BuildVersion).$(BuildRev)</AssemblyVersion>
       <FileVersion>$(AssemblyVersion)</FileVersion>
       <Version>$(AssemblyVersion)-$(Branch).$(CommitHash)</Version>
-      <Copyright>Copyright ©  $([System.DateTime]::Now.ToString(`yyyy`))</Copyright>
+      <Copyright>Copyright Â©  $([System.DateTime]::Now.ToString(`yyyy`))</Copyright>
     </PropertyGroup>
   </Target>
 
